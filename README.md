@@ -2,5 +2,5 @@
 
 ## Bibliothec - Laboratory exercises
 
-Bibliothec/web - SPRING BOOT
-Bibliothec/frontend - REACT JS
+### Bibliothec/web - SPRING BOOT
+### Bibliothec/frontend - REACT JS
