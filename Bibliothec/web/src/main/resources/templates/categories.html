@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>name</th>
+
+    </tr>
+    <!-- For each event you should have one <tr> like below -->
+    <tr class="item" th:each="cat : ${categories}">
+        <td th:text="${cat.name}">[event.name]</td>
+    </tr>
+</table>
+</body>
+</html>
