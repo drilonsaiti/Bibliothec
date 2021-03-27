@@ -6,7 +6,9 @@ import mk.finki.ukim.mk.lab.service.BooksService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
@@ -21,7 +23,8 @@ public class BookRestController {
 
     @GetMapping
     public List<Book> findAll(){
-        return this.booksService.findAll();
+        return this.booksService.findAll().stream()
+                .sorted(Comparator.comparing(Book::getId)).collect(Collectors.toList());
     }
 
     @GetMapping("/{id}")
